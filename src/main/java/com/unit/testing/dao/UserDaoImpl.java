@@ -18,6 +18,11 @@ public class UserDaoImpl {
                 user.setUsername("testuser2");
                 user.setFirstname("testuser2first");
                 user.setLastname("testuser2last");
+            } else if (username.equalsIgnoreCase("testuser3")) {
+                user = new User();
+                user.setUsername("testuser3");
+                user.setFirstname("testuser3first");
+                user.setLastname("testuser3last");
             } else if (username.equals("invalidUser")) {
                throw new Exception("invalid user provided");
             }
