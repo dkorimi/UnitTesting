@@ -74,4 +74,6 @@ object Build : BuildType({
 
 object Buildtemplate : Template({
     name = "buildtemplate"
+
+    maxRunningBuilds = 10
 })
