@@ -33,6 +33,8 @@ project {
 
     buildType(Build)
 
+    template(Buildtemplate)
+
     features {
         githubConnection {
             id = "PROJECT_EXT_2"
@@ -41,8 +43,6 @@ project {
             clientSecret = "credentialsJSON:b071e780-401b-4f35-8291-d7127ea5cc98"
         }
     }
-
-    subProject(TeamcitySubProject1)
 }
 
 object Build : BuildType({
@@ -72,7 +72,6 @@ object Build : BuildType({
     }
 })
 
-
-object TeamcitySubProject1 : Project({
-    name = "teamcitySubProject1"
+object Buildtemplate : Template({
+    name = "buildtemplate"
 })
