@@ -30,6 +30,7 @@ version = "2022.04"
 
 project {
     description = "Sample project for team city POC"
+    defaultTemplate = RelativeId("Buildtemplate")
 
     buildType(Build)
 
@@ -54,10 +55,12 @@ object Build : BuildType({
 
     steps {
         maven {
+            id = "RUNNER_1"
             goals = "clean install"
             runnerArgs = "-Dmaven.test.failure.ignore=true"
         }
         dockerCommand {
+            id = "RUNNER_2"
             commandType = build {
                 source = file {
                     path = "Dockerfile"
@@ -68,6 +71,7 @@ object Build : BuildType({
 
     triggers {
         vcs {
+            id = "TRIGGER_1"
         }
     }
 })
