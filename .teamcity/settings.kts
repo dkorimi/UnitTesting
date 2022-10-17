@@ -88,7 +88,7 @@ object Buildtemplate : Template({
             id = "RUNNER_4"
             commandType = build {
                 source = file {
-                    path = "UnitTesting/Dockerfile"
+                    path = "Dockerfile"
                 }
                 commandArgs = "--pull"
             }
