@@ -99,4 +99,5 @@ object Buildtemplate : Template({
 
 object TeamcitySubProject1 : Project({
     name = "teamcitySubProject1"
+    defaultTemplate = RelativeId("Buildtemplate")
 })
