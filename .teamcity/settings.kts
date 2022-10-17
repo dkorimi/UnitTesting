@@ -67,6 +67,15 @@ object Build : BuildType({
                 }
             }
         }
+        dockerCommand {
+            id = "RUNNER_4"
+            commandType = build {
+                source = file {
+                    path = "Dockerfile"
+                }
+                commandArgs = "--pull"
+            }
+        }
     }
 
     triggers {
