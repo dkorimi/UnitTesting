@@ -80,4 +80,11 @@ object Buildtemplate : Template({
     name = "buildtemplate"
 
     maxRunningBuilds = 10
+
+    steps {
+        maven {
+            id = "RUNNER_3"
+            goals = "clean install"
+        }
+    }
 })
