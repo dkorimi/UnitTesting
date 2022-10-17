@@ -55,14 +55,6 @@ object Build : BuildType({
 
     steps {
         dockerCommand {
-            id = "RUNNER_2"
-            commandType = build {
-                source = file {
-                    path = "Dockerfile"
-                }
-            }
-        }
-        dockerCommand {
             id = "RUNNER_4"
             commandType = build {
                 source = file {
