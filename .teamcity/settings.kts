@@ -86,5 +86,14 @@ object Buildtemplate : Template({
             id = "RUNNER_3"
             goals = "clean install"
         }
+        dockerCommand {
+            id = "RUNNER_4"
+            commandType = build {
+                source = file {
+                    path = "UnitTesting/Dockerfile"
+                }
+                commandArgs = "--pull"
+            }
+        }
     }
 })
