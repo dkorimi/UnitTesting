@@ -44,6 +44,8 @@ project {
             clientSecret = "credentialsJSON:b071e780-401b-4f35-8291-d7127ea5cc98"
         }
     }
+
+    subProject(TeamcitySubProject1)
 }
 
 object Build : BuildType({
@@ -92,4 +94,9 @@ object Buildtemplate : Template({
             }
         }
     }
+})
+
+
+object TeamcitySubProject1 : Project({
+    name = "teamcitySubProject1"
 })
