@@ -54,11 +54,6 @@ object Build : BuildType({
     }
 
     steps {
-        maven {
-            id = "RUNNER_1"
-            goals = "clean install"
-            runnerArgs = "-Dmaven.test.failure.ignore=true"
-        }
         dockerCommand {
             id = "RUNNER_2"
             commandType = build {
