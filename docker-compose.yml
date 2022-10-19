@@ -1,6 +1,7 @@
 version: '2'
 services:
   unitTesting:
+  image: unitTest:1.0
     build:
       dockerfile: .
     ports:
