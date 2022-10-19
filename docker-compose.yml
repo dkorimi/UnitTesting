@@ -1,6 +1,6 @@
 version: '3.9'
 services:
-  unitTesting:
+  unittesting:
    build: .
    ports:
       - "8000:8080"
