@@ -100,4 +100,11 @@ object Buildtemplate : Template({
 object TeamcitySubProject1 : Project({
     name = "teamcitySubProject1"
     defaultTemplate = RelativeId("Buildtemplate")
+
+    buildType(TeamcitySubProject1_TeamcitySubProject1BuildConfiguration)
+})
+
+object TeamcitySubProject1_TeamcitySubProject1BuildConfiguration : BuildType({
+    templates(Buildtemplate)
+    name = "teamcitySubProject1BuildConfiguration"
 })
